@@ -1,0 +1,45 @@
+html{
+    background: rgba(57, 62, 70, 0.9)
+}
+.header{
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    color: #eeeeee;
+}
+.canvasDiv{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    max-width: 500px;
+    height: 500px;
+    border: 2px solid rgba(0, 0, 0);
+    margin: auto;
+}
+.squareDiv{
+    background-color: #eeeeee;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.clearBtn{
+    text-align: center;
+    font-size: 20px;
+    font-family: Impact;
+    background-color: white;
+    border-radius: 6px;
+    border: none;
+    height: auto;
+    width: auto;
+    outline: none;
+}
+.clearBtn:hover{
+    background-color: #00adb5;
+}
+.clearBtn:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+
+}
+.controls{
+    text-align: center;
+    padding:5px;
+}
