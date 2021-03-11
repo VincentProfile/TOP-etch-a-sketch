@@ -19,9 +19,20 @@ function randomRGB(){
     return [r,g,b];
 }
 function changeDivBG(e){
-    const randomColor = randomRGB();
-    e.target.style.backgroundColor = `rgba(${randomColor[0]},${randomColor[1]},
-        ${randomColor[2]})`;
+    // add 10% black to current randomed color
+    const divColor = e.target.style.backgroundColor;
+    console.log(divColor);
+    if (divColor == ''){
+        // add random color to square div
+        const randomColor = randomRGB();
+        e.target.style.backgroundColor = `rgba(${randomColor[0]},${randomColor[1]},
+            ${randomColor[2]})`;
+    }
+    else{
+        // how can I add 10% black to current color?
+        if(divColor == divColor)
+            console.log("true");
+    }
 }
 
 const clearBtn = document.querySelector('.clearBtn');
