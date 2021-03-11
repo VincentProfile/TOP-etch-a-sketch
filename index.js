@@ -25,7 +25,7 @@ function newGridSize(e){
     }
     if (newGridSize != null){
         const canvasDiv = document.querySelector('.canvasDiv');
-        // clear grid
+        // clear grid --there is an issue with it--
         for (i < 0; i < canvasDiv.children.length; i++) {
             canvasDiv.removeChild(canvasDiv.firstChild);
         }
