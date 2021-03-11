@@ -11,8 +11,17 @@ function setGridSize(totalGrid){
     }
 }
 
+function randomRGB(){
+    // random number between 0-255
+    r = Math.floor(Math.random()*255);
+    g = Math.floor(Math.random()*255);
+    b = Math.floor(Math.random()*255);
+    return [r,g,b];
+}
 function changeDivBG(e){
-    e.target.style.backgroundColor = 'blue';
+    const randomColor = randomRGB();
+    e.target.style.backgroundColor = `rgba(${randomColor[0]},${randomColor[1]},
+        ${randomColor[2]})`;
 }
 
 const clearBtn = document.querySelector('.clearBtn');
@@ -23,13 +32,12 @@ function newGridSize(e){
     if (newGridSize > 100){
         newGridSize = prompt("Maximum of 100 squares per side");
     }
-    if (newGridSize != null){
+    // check if input is valid
+    if (newGridSize != null && newGridSize > 0){
         const canvasDiv = document.querySelector('.canvasDiv');
-        // clear grid --there is an issue with it--
-        for (i < 0; i < canvasDiv.children.length; i++) {
-            canvasDiv.removeChild(canvasDiv.firstChild);
-        }
-        // set new grid
+        // clear grid
+        canvasDiv.innerHTML = '';
+        // set grid
         const newTotalGrid = newGridSize * newGridSize;
         setGridSize(newTotalGrid);
         canvasDiv.style.gridTemplateColumns = `repeat(${newGridSize}, 1fr)`;
