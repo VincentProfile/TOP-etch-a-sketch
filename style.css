@@ -18,6 +18,7 @@ html{
 .squareDiv{
     background-color: #ffffff;
     border: 1px solid rgb(0, 0, 0);
+    opacity: 1;
 }
 
 .clearBtn{
